@@ -1,0 +1,161 @@
+/*--------------------------------------------------------------------- Column Setting --------------------------------------------------------------------- */
+.css-t60ub3 .fc .fc-col-header-cell {
+  background-color: transparent !important;
+}
+
+table.fc-scrollgrid.fc-scrollgrid-liquid {
+    border-radius: 10px;
+}
+
+th.fc-col-header-cell.fc-day.fc-day-sun {
+    border-top-left-radius: 10px;
+    border-width: 0 0 1px 0 !important;
+    color : #ED4040 !important;
+    border-color: #B8B9BA !important;
+}
+
+th.fc-col-header-cell.fc-day.fc-day-sat {
+    border-top-right-radius: 10px;
+    border-width: 0 0 1px 0 !important;
+    color : #ED4040 !important;
+    border-color: #B8B9BA !important;
+}
+
+th.fc-col-header-cell.fc-day.fc-day-mon,
+th.fc-col-header-cell.fc-day.fc-day-tue,
+th.fc-col-header-cell.fc-day.fc-day-wed,
+th.fc-col-header-cell.fc-day.fc-day-thu,
+th.fc-col-header-cell.fc-day.fc-day-fri {
+    border-width: 0 0 1px 0 !important;
+    border-color: #B8B9BA !important;
+}
+
+
+.fc-day-header {
+    text-align: center !important;
+  }
+  
+  .fc-col-header-cell-cushion {
+    display: block !important;
+    text-align: center !important;
+    margin-top: 4px !important; /* Adjust this value to control the spacing between the date and day */
+    font-weight: bold !important;
+  }
+
+
+
+
+
+  /*--------------------------------------------------------------------- Cell Setting --------------------------------------------------------------------- */
+ /* Set Text Position */
+
+ .css-t60ub3 .fc{
+    --fc-today-bg-color: #393939 !important;
+    --fc-border-color: #B8B9BA !important;
+ }
+
+
+  .css-t60ub3 .fc .fc-daygrid-day-top .fc-daygrid-day-number {
+    text-align: left !important;
+  }
+/* Set BG */
+  .custom-calendar .fc-day.fc-day-other-month {
+    color : #ED4040 !important;
+    border-width: 0 1px 1px 0 !important;
+    border-color: #B8B9BA !important;
+    border-style: solid !important;
+  }
+
+  
+  /*------------------------------------------ set color for Weekend -------------------------------------- */
+  td.fc-day.fc-day-sat.fc-day-future.fc-daygrid-day,
+  td.fc-day.fc-day-sun.fc-day-future.fc-daygrid-day {
+    color : #ED4040 !important;
+    background-color: #F3F4F6 !important;
+    border-color: #B8B9BA !important;
+  }
+
+  td.fc-day.fc-day-sat.fc-day-past.fc-daygrid-day,
+  td.fc-day.fc-day-sun.fc-day-past.fc-daygrid-day{
+    color : #ED4040 !important;
+    background-color: #F3F4F6 !important;
+    border-color: #B8B9BA !important;
+  }
+
+/*---------------------------------------------------- border color setting------------------------------------------------- */
+
+/* future */
+td.fc-day.fc-day-mon.fc-day-future.fc-daygrid-day,
+td.fc-day.fc-day-tue.fc-day-future.fc-daygrid-day,
+td.fc-day.fc-day-wed.fc-day-future.fc-daygrid-day,
+td.fc-day.fc-day-thu.fc-day-future.fc-daygrid-day,
+td.fc-day.fc-day-fri.fc-day-future.fc-daygrid-day {
+    /* border-width: 0 1px 1px 0 !important; */
+    /* background-color: #000 !important; */
+    height: 160px !important;
+    border-color: #B8B9BA !important;
+    /* border-style: solid !important; */
+}
+
+/* past */
+td.fc-day.fc-day-mon.fc-day-past.fc-daygrid-day,
+td.fc-day.fc-day-tue.fc-day-past.fc-daygrid-day,
+td.fc-day.fc-day-wed.fc-day-past.fc-daygrid-day,
+td.fc-day.fc-day-thu.fc-day-past.fc-daygrid-day,
+td.fc-day.fc-day-fri.fc-day-past.fc-daygrid-day {
+    /* border-width: 0 1px 1px 0 !important; */
+    height: 160px !important;
+    border-color: #B8B9BA !important;
+    /* border-style: solid !important; */
+}
+
+/* today */
+td.fc-day.fc-day-mon.fc-day-today.fc-daygrid-day,
+td.fc-day.fc-day-tue.fc-day-today.fc-daygrid-day,
+td.fc-day.fc-day-wed.fc-day-today.fc-daygrid-day,
+td.fc-day.fc-day-thu.fc-day-today.fc-daygrid-day,
+td.fc-day.fc-day-fri.fc-day-today.fc-daygrid-day,
+td.fc-day.fc-day-sat.fc-day-today.fc-daygrid-day,
+td.fc-day.fc-day-sun.fc-day-today.fc-daygrid-day{
+  height: 160px !important;
+    color : #FFFFFF !important;
+    border-width: 0 1px 1px 0 !important;
+    border-color: #B8B9BA !important;
+    border-style: solid !important;
+    background-color: #393939 !important;
+  }
+ 
+
+
+  /* --------------------------------------------------------Week setting----------------------------------------------------- */
+
+  .fc .fc-timegrid-slot{
+    height: 80.7px !important;
+    border-color: #393939 !important;
+    text-transform: uppercase !important;
+    text-align: left !important;
+  }
+  .fc .fc-timegrid-axis-frame:first-child {
+    text-transform: uppercase !important;
+}
+
+  /* ------------------------------------------------------------------------------------------------------------------------------- */
+
+  /* ------------------------------------------------Button---------------------------------------------------------- */
+
+  .css-1o86dvf-MuiButtonBase-root-MuiFab-root-MuiSpeedDial-fab.MuiFab-primary {
+    background-color: #393939 !important;
+    box-shadow:0 14px 12px rgba(57, 57, 57, 0.5) !important;
+  }
+
+
+  /* ---------------------------------------------------List setting---------------------------------------------------------- */
+ 
+  .fc-theme-standard .fc-list {
+    border: none !important;
+  }
+
+
+  /* .fc-theme-standard td, .fc-theme-standard th {
+    border: none !important;
+  } */

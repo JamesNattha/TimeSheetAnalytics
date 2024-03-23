@@ -1,0 +1,70 @@
+import PropTypes from 'prop-types';
+
+// material-ui
+import { Box, Grid, Typography } from '@mui/material';
+
+// project import
+import AuthFooter from 'components/cards/AuthFooter';
+import Logo from 'components/logo';
+import LogoFooter from 'components/logo/indexfooter';
+import AuthCard from './AuthCard';
+
+// assets
+import AuthBackground from 'assets/images/auth/AuthBackground';
+
+// ==============================|| AUTHENTICATION - WRAPPER ||============================== //
+
+const AuthWrapper = ({ children }) => (
+  <Box sx={{ backgroundColor: '#232323', minHeight: '100vh' }}>
+    <AuthBackground />
+    <Grid container direction="column" justifyContent="flex-end" sx={{ backgroundColor: '#232323', minHeight: '100vh' }}>
+      <Grid item xs={12} sx={{ backgroundColor: '#232323' }}>
+        <Logo />
+      </Grid>
+      <Grid item xs={12}>
+        <Grid
+          item
+          xs={12}
+          container
+          justifyContent="center"
+          alignItems="center"
+          sx={{
+            backgroundColor: '#232323',
+            minHeight: { xs: 'calc(100vh - 210px)', sm: 'calc(100vh - 134px)', md: 'calc(100vh - 112px)' }
+          }}
+        >
+          <Grid item>
+            <AuthCard>{children}</AuthCard>
+          </Grid>
+        </Grid>
+      </Grid>
+      {/* <Grid item xs={12} sx={{ backgroundColor: '#232323' , display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <Typography variant="subtitle2" color="secondary" target="_blank" underline="hover">
+          ©2023 Undefined ALL RIGHTS RESERVED.
+        </Typography>
+        <Grid item xs={8} sx={{ backgroundColor: '#232323' }}>
+          <Logo />
+        </Grid>
+      </Grid> */}
+      <Grid item xs={12} sx={{ backgroundColor: '#232323', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <Grid item xs={6} sx={{ backgroundColor: '#232323', textAlign: 'center' }}>
+          <Typography variant="subtitle2" color="secondary" target="_blank" underline="hover"></Typography>
+        </Grid>
+        <Grid item xs={6} sx={{ backgroundColor: '#232323', textAlign: 'center' }}>
+          <Typography variant="subtitle2" color="secondary" target="_blank" underline="hover">
+            ©2023 Undefined ALL RIGHTS RESERVED.
+          </Typography>
+        </Grid>
+        <Grid item xs={6} sx={{ backgroundColor: '#232323', display: 'flex', justifyContent: 'flex-end' }}>
+          <LogoFooter />
+        </Grid>
+      </Grid>
+    </Grid>
+  </Box>
+);
+
+AuthWrapper.propTypes = {
+  children: PropTypes.node
+};
+
+export default AuthWrapper;

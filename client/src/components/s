@@ -1,0 +1,112 @@
+data
+                        .filter((row) => row.no_hidden === noHiddenValue && row.project_name !== "")
+                        .map((row, j) => (
+                          <Paper
+                            key={j}
+                            variant="outlined"
+                            sx={{
+                              py: 1,
+                              boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+                              border: "1px solid #ccc",
+                              borderRadius: "10px",
+                              pt: "14px",
+                              mb: "14px"
+                            }}
+                          >
+                            <div style={{paddingLeft: "20px"}}>
+                              <div>noHiddenValue: {noHiddenValue}</div>
+                              <div>Project Code: {row.project_code}</div>
+                              <div>Project Name: {row.project_name}</div>
+                            </div>
+                            <Table {...getTableProps()}>
+                              <TableHead style={{backgroundColor: "#E0E0E0"}}>
+                                {headerGroups.map((headerGroup, i) => (
+                                  <TableRow key={i} {...headerGroup.getHeaderGroupProps()} sx={{"& > th:first-of-type": {width: "58px"}}}>
+                                    {headerGroup.headers.map((column, index) => (
+                                      <TableCell
+                                        key={index}
+                                        {...column.getHeaderProps([{className: column.className}, getHeaderProps(column)])}
+                                        sx={{
+                                          width: column.width || "auto",
+                                          ":not(:last-of-type)::after": {
+                                            position: "inherit "
+                                          }
+                                        }}
+                                      >
+                                        <HeaderSort column={column} />
+                                        {/* <Filter column={column} /> */}
+                                      </TableCell>
+                                    ))}
+                                  </TableRow>
+                                ))}
+                              </TableHead>
+
+                              <TableBody {...getTableBodyProps()}>
+                                {page.map((row, i) => {
+                                  console.log("row.cells[0].value", row.cells[0].row);
+
+                                  prepareRow(row);
+                                  if (
+                                    row.cells[0].row.original.project_name !== "" &&
+                                    row.cells[0].row.original.project_name !== null &&
+                                    row.cells[0].row.original.no_hidden !== noHiddenValue
+                                  ) {
+                                    console.log("prepareRow in func", row.cells[0].row.original.no_hidden !== noHiddenValue);
+                                    return null;
+                                  }
+                                  console.log("prepareRow", row.cells[0].row.original);
+                                  const rowProps = row.getRowProps();
+
+                                  return row.cells[0].value === "" ? null : (
+                                    <Fragment key={i}>
+                                      <TableRow
+                                        {...row.getRowProps()}
+                                        onClick={() => {
+                                          row.toggleRowSelected();
+                                        }}
+                                        sx={{
+                                          cursor: "pointer",
+                                          bgcolor: row.isSelected ? alpha(theme.palette.primary.lighter, 0.35) : "inherit"
+                                        }}
+                                      >
+                                        {/* {console.log("row.cells", row.cells.map((cell) => cell.value)[1])} */}
+                                        {row.cells
+                                          // .filter((cell) => cell.value !== "")
+                                          .map((cell, index) => (
+                                            <TableCell key={index} {...cell.getCellProps([{className: cell.column.className}])}>
+                                              <Tooltip
+                                                title={index === 0 || index === row.cells.length - 1 ? null : cell.render("Cell")}
+                                                arrow
+                                              >
+                                                <span>
+                                                  {cell.column.truncate && cell.value && cell.value.length > cell.column.truncate
+                                                    ? `${cell.value.slice(0, cell.column.truncate)}...`
+                                                    : cell.render("Cell")}
+                                                </span>
+                                              </Tooltip>
+                                            </TableCell>
+                                          ))}
+                                      </TableRow>
+                                      {row.isExpanded && (
+                                        <TableCell colSpan={9} sx={{height: "100%", width: "100%"}}>
+                                          {renderRowSubComponent({row, rowProps, visibleColumns})}
+                                        </TableCell>
+                                      )}
+                                    </Fragment>
+                                  );
+                                })}
+                                <TableRow sx={{"&:hover": {bgcolor: "transparent !important"}}}>
+                                  <TableCell sx={{p: 2, py: 3}} colSpan={9}>
+                                    <TablePagination
+                                      gotoPage={gotoPage}
+                                      rows={rows}
+                                      setPageSize={setPageSize}
+                                      pageSize={pageSize}
+                                      pageIndex={pageIndex}
+                                    />
+                                  </TableCell>
+                                </TableRow>
+                              </TableBody>
+                            </Table>
+                          </Paper>
+                        ))

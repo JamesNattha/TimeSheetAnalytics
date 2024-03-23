@@ -1,0 +1,200 @@
+.swal2-container {
+  z-index: 2000 !important;
+}
+
+/* .swal2-icon.swal2-success .swal2-success-ring {
+position: absolute;
+z-index: 2;
+top: -0.25em;
+left: -0.25em;
+box-sizing: content-box;
+width: 100%;
+height: 100%;
+border: 0.25em solid rgba(165,220,134,.3);
+border-radius: 50%;
+} */
+
+.swal2-popup {
+  width: 370px !important;
+  height: 350px !important;
+  border-radius: 10px !important;
+}
+
+.modal-success {
+  height: 250px !important;
+}
+
+.modal-success .swal2-title {
+  align-items: center !important;
+  padding: 10px !important;
+  /* height: 150px !important; */
+}
+
+.modal-success .swal2-icon-content {
+  /* align-items: center !important; */
+  margin-top: 20px !important;
+  margin-bottom: 10px !important;
+  /* height: 150px !important; */
+}
+.modal-error {
+  height: 250px !important;
+}
+
+.modal-error .swal2-title {
+  align-items: center !important;
+  /* padding: 10px !important; */
+  /* height: 150px !important; */
+}
+
+.modal-error .swal2-icon-content {
+  /* align-items: center !important; */
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  /* height: 150px !important; */
+}
+
+.swal2-html-container {
+  font-size: 14px !important;
+  color: #b8b9ba !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.swal2-icon .swal2-icon-content {
+  display: flex !important;
+  align-items: center !important;
+  width: 56px !important;
+  height: 56px !important;
+  /* margin-top: 0px !important; */
+}
+
+/* .swal2-icon .swal2-success-ring {
+ display: flex !important;
+  align-items: center !important;
+width: 50% !important;
+height: 50% !important;
+font-size: 16px !important; 
+} */
+
+/* .swal2-icon .swal2-success-fix {
+font-size: 8px !important;
+} */
+/* .swal2-icon.swal2-success .swal2-success-line-tip,
+.swal2-icon.swal2-success .swal2-success-line-long {
+width: 14px !important; 
+height: 14px !important; 
+} */
+.swal2-icon {
+  border: none !important;
+  width: 1em !important;
+  height: 1em !important;
+}
+
+.swal2-title {
+  margin-top: 10px !important;
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 32px !important;
+}
+
+.title-custom {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 18px !important;
+}
+
+.swal2-styled.swal2-confirm {
+  border-radius: 30px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  height: 48px !important;
+  background-color: #393939 !important;
+  padding: 0 20px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swal2-styled.swal2-cancel {
+  border-radius: 30px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  width: 134.5px !important;
+  height: 48px !important;
+  color: #393939 !important;
+  border: 2px solid #393939 !important;
+  background-color: transparent !important;
+}
+/* Add border-radius to the Swal container */
+/* .custom-popup {
+  width: 327px !important; 
+  height: 280px !important; 
+  border-radius: 10px !important;
+} */
+
+.confirm-rounded-button {
+  width: 134.5px !important;
+}
+
+/* Add border-radius to the confirm and cancel buttons */
+.rounded-button {
+  width: 280px !important;
+}
+
+.outlined-button {
+  background-color: transparent !important;
+  color: #0066ff !important;
+  border: 2px solid #0066ff !important;
+  /* border-radius: 30px !important;  */
+  width: 134.5px !important;
+  height: 48px !important;
+  /* font-size: 13px !important;
+  font-weight: 600 !important; */
+}
+
+.swal2-icon.swal2-warning {
+  border-color: transparent !important;
+}
+
+.custom-icon {
+  width: 56px !important; /* Set the custom icon width to 56px */
+  height: 56px !important; /* Set the custom icon height to 56px */
+}
+
+/* ---------------------------------Icon SVG-------------------------------------- */
+.delete-icon {
+  background-image: url(../images/icons-svg/24pxDelete.svg) !important;
+  background-size: contain !important;
+  width: 56px !important;
+  height: 56px !important;
+}
+
+.success-icon {
+  background-image: url(../images/icons-svg/24pxSuccess.svg) !important;
+  background-size: contain !important;
+  width: 56px !important;
+  height: 56px !important;
+}
+
+.discard-icon {
+  background-image: url(../images/icons-svg/24pxFaild.svg) !important;
+  background-size: contain !important;
+  width: 56px !important;
+  height: 56px !important;
+}
+
+.mail-icon {
+  background-image: url(../images/icons-svg/24pxmail.svg) !important;
+  background-size: contain !important;
+  width: 56px !important;
+  height: 56px !important;
+}
+
+.textfield-container {
+  position: relative;
+}
+
+.textfield-container .MuiInputBase-input {
+  transition: width 0.3s;
+}
+
+.textfield-container .expanded {
+  width: auto;
+}

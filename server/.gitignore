@@ -1,0 +1,10 @@
+node_modules
+.env
+*/storage/prs/*
+*/storage/files/*
+/storage/*
+.DS_Store
+logs
+api-logs/*
+*.lock
+package-lock.json

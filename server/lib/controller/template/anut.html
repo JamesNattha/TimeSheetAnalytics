@@ -1,0 +1,96 @@
+<!-- emailTemplate.ejs -->
+<html>
+<head>
+  <title>Email Template</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <style>
+    /* Add custom styling for the card container */
+    .card {
+  
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+
+    header {
+      background: #e9f3ff;
+      padding: 30px 0;
+      font-family: 'Open Sans', sans-serif;
+      border: none;
+    }
+
+    main {
+      background: #ffffff;
+      padding: 30px 0;
+      font-family: 'Open Sans', sans-serif;
+      border: none;
+    }
+
+    footer {
+      padding: 30px 0;
+      font-family: 'Open Sans', sans-serif;
+      border: none;
+    }
+
+    .egg-button {
+      display: inline-block;
+      padding: 10px 60px;
+      background-color: #0066ff;
+      border-radius: 30px;
+      position: relative;
+      color: #fff;
+      text-decoration: none;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body >
+  <div >
+  <table class="card">
+    <tr >
+      <td>
+        <header>
+        <img src="https://mailtrack.io/wp-content/uploads/2020/10/send-mass-email-in-gmail.png" alt="Header Image" style="max-width: 50%;">
+      </header>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <main>
+          <h2 style="text-align: left; margin-left: 60;"><strong>Dear Khun <%= name %>.</strong></h2>
+          <p style="margin-top: 60px;"><%= content %></p>
+
+          <p style="margin-top: 60px;"><%= textbutton %></p>
+          <a href="<%= buttonLink %>" class="egg-button">Click Here</a>
+          <p style="margin-top: 12px;">Or Copy the link to open the browser</p>
+          <p style="margin-top: 12px; margin-bottom: 12;"><a href="<%= buttonLink %>" class="egg-link"><%= buttonLink %></a></p>
+          <p style="text-align: left; margin-left: 60; margin-top: 60px;">Best regards,</p>
+          <h3 style="text-align: left; margin-left: 60;"><strong>Undefined CO.,Ltd</strong></h3>
+        </main>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <footer>
+          <div > <!-- Add the card container here -->
+            
+            <p style="text-align: left; margin-left: 60; margin-top: 100px;">If you have any questions, please contact the consultant or <a href="<%= learnMoreLink %>" style="color: #007bff; text-decoration: underline;">Click here</a> to learn more</p>
+          </div>
+        </footer>
+      </td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
